@@ -43,7 +43,9 @@ class Login extends Component {
         );
     } else {
       return (
-        <button onClick={this.onLogin}>Login</button>
+        <div>
+          <button onClick={this.onLogin}>Login</button>
+        </div>
         );
     }
   }

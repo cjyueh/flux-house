@@ -4,7 +4,7 @@ import './App.css';
 import * as helpers from './utils/helpers.js';
 
 const config = {
-  url: 'http://localhost:8080',
+  url: 'http://localhost:3000',
   flux_url: 'https://flux.io',
   flux_client_id: '4a9763c3-eab9-4236-a8a7-930f589a12a4'
 }
@@ -25,6 +25,10 @@ class App extends Component {
     });
   }
 
+  onLogin() {
+    helpers.login();
+  }
+
   showLoginView() {
     if (this.state.loggedIn) {
       return (
@@ -32,7 +36,7 @@ class App extends Component {
         );
     } else {
       return (
-        <h1>logged out</h1>
+        <button onClick={this.onLogin}>Login</button>
         );
     }
   }

@@ -16,3 +16,8 @@ export function init(config) {
   // check that the user is logged in, otherwise show the login page
     .then(function() { return helpers.isLoggedIn(); });
 }
+
+/* Show Flux Login */
+export function login() {
+  helpers.redirectToFluxLogin()
+}

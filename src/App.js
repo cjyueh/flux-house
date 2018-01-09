@@ -10,6 +10,11 @@ const config = {
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    helpers.init(config);
+  }
+
   render() {
     return (
       <div className="App">

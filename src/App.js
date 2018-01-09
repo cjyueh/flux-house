@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import * as helpers from './utils/helpers.js';
 
 const config = {
   url: 'http://localhost:8080',

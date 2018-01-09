@@ -25,6 +25,18 @@ class App extends Component {
     });
   }
 
+  showLoginView() {
+    if (this.state.loggedIn) {
+      return (
+        <h1>logged in</h1>
+        );
+    } else {
+      return (
+        <h1>logged out</h1>
+        );
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -35,6 +47,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        {this.showLoginView()}
       </div>
     );
   }

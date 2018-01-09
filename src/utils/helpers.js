@@ -3,7 +3,7 @@
 let sdk;
 let helpers;
 
-// Start app
+/* Start App */
 export function init(config) {
 
   // instantiate Flux SDK with app's client id

@@ -12,7 +12,17 @@ const config = {
 class App extends Component {
   constructor(props) {
     super(props);
-    helpers.init(config);
+    this.state = {
+      loggedIn: false
+    };
+    helpers.init(config).then(loggedIn => {
+      this.setState({loggedIn: loggedIn});
+      if (loggedIn) {
+        console.log('logged in');
+      } else {
+        console.log('not logged in');
+      }
+    });
   }
 
   render() {

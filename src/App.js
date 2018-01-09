@@ -29,10 +29,19 @@ class App extends Component {
     helpers.login();
   }
 
+  onLogout() {
+    helpers.logout();
+    // reset state to default (logged out)
+    // this.setState({loggedIn: false}); // this is undefined?
+  }
+
   showLoginView() {
     if (this.state.loggedIn) {
       return (
-        <h1>logged in</h1>
+        <div>
+          <h1>logged in</h1>
+          <button onClick={this.onLogout}>Logout</button>
+        </div>
         );
     } else {
       return (

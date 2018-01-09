@@ -21,3 +21,7 @@ export function init(config) {
 export function login() {
   helpers.redirectToFluxLogin()
 }
+
+export function logout() {
+  helpers.logout();
+}
